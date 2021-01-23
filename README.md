@@ -99,3 +99,7 @@ Copyright
 License
 =============================
 Hestia Control Panel is licensed under [GPL v3](https://github.com/hestiacp/hestiacp/blob/release/LICENSE) license, and is based on the [VestaCP](https://www.vestacp.com/) project.<br>
+
+
+Steps to make deb file.
+sudo ./hst_autocompile.sh --hestia '~localsrc' no
