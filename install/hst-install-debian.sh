@@ -294,7 +294,7 @@ fi
 # Welcome message
 echo "Welcome to the Hestia Control Panel installer!"
 echo 
-echo "Please wait, the installer is now checking for missing dependencies..."
+echo "hare krishna Please wait, the installer is now checking for missing dependencies..."
 echo 
 
 # Update apt repository
@@ -821,7 +821,7 @@ chmod a+x /usr/sbin/policy-rc.d
 
 # Installing apt packages
 echo "The installer is now downloading and installing all required packages."
-echo -ne "NOTE: This process may take 10 to 15 minutes to complete, please wait... "
+echo -ne "NOTE: This process may take 10 to 15 minutes to complete, please wait... hare krishna"
 echo
 apt-get -y install $software > /dev/null 2>&1 &
 BACK_PID=$!
