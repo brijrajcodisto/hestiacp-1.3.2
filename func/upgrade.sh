@@ -6,6 +6,8 @@
 #######                Functions & Initialization             #######
 #####################################################################
 
+BIN=/usr/local/hestia/bin
+
 is_debug_build() {
     if [[ "$new_version" =~ "alpha" ]] || [[ "$new_version" =~ "beta" ]]; then
         DEBUG_MODE="true"
