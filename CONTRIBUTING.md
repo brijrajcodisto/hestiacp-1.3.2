@@ -1,4 +1,4 @@
-Hestia Control Panel - Contribution Guidelines
+Mackshost Control Panel - Contribution Guidelines
 -----------------------
 
 Ways to contribute
@@ -11,9 +11,9 @@ Ways to contribute
 - **New features**:
     - Is there an awesome feature that you'd love to see included? While our development team tries to fulfill all reasonable requests, it can take time to implement new features depending on the amount of work involved. Submit a pull request with your code and if your idea is approved, we'll review and test it for inclusion with an upcoming release.
 - **Translations**:
-    - If you are a non-English speaker and would like to improve the quality of the translations used in Hestia Control Panel's web interface, Please go to [Hestia Translate](https://translate.hestiacp.com/projects/hestiacp/) to review the translations. For more information please read [How to contribute with Translations](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664).  Or open an issue report [GitHub](https://www.github.com/hestiacp/hestiacp/issues) highlighting the issue with the current translation so that it can be corrected.
+    - If you are a non-English speaker and would like to improve the quality of the translations used in Mackshost Control Panel's web interface, Please go to [Hestia Translate](https://translate.hestiacp.com/projects/hestiacp/) to review the translations. For more information please read [How to contribute with Translations](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664).  Or open an issue report [GitHub](https://www.github.com/hestiacp/hestiacp/issues) highlighting the issue with the current translation so that it can be corrected.
 - **Donations**:
-    - If you're not a developer but you still want to make a contribution, you can make a donation to the Hestia Control Panel project to further its development (or if you'd just like to buy our developers a lunch, we'd appreciate that too). We currently accept donations through [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA).
+    - If you're not a developer but you still want to make a contribution, you can make a donation to the Mackshost Control Panel project to further its development (or if you'd just like to buy our developers a lunch, we'd appreciate that too). We currently accept donations through [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA).
 
 Development Guidelines
 -----------------------
@@ -92,7 +92,7 @@ Our development and release cycles
     - Push the code to the `release` branch and create a corresponding version tag.
     - Compile new packages and publish them to our APT repository. 
     - **Notes:**
-        - `release` always contains the highest released version of Hestia Control Panel.
+        - `release` always contains the highest released version of Mackshost Control Panel.
         - For major releases, a `release/vX.x` branch will be created for maintenance and servicing purposes.
 
 
@@ -100,7 +100,7 @@ Our development and release cycles
 
 Thank you!
 -----------------------
-We appreciate **all** contributions no matter what size; your feedback and input directly shapes the future of Hestia Control Panel and we could not do it without your support.
+We appreciate **all** contributions no matter what size; your feedback and input directly shapes the future of Mackshost Control Panel and we could not do it without your support.
 
 Thank you for your time and we look forward to seeing your pull requests,<br>
-The Hestia Control Panel development team
+The Mackshost Control Panel development team

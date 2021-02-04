@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Hestia Control Panel upgrade script for target version 1.3.0
+# Mackshost Control Panel upgrade script for target version 1.3.0
 
 #######################################################################################
 #######                      Place additional commands below.                   #######

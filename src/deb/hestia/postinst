@@ -17,7 +17,7 @@ source /usr/local/hestia/install/upgrade/upgrade.conf
 ###############################################################
 #             Set new version numbers for packages            #
 ###############################################################
-# Hestia Control Panel
+# Mackshost Control Panel
 new_version=$(dpkg -l | awk '$2=="hestia" { print $3 }')
 
 ###############################################################

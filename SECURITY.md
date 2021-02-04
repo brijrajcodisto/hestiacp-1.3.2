@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you believe that you have have discovered a vulnerability in Hestia Control Panel,
+If you believe that you have have discovered a vulnerability in Mackshost Control Panel,
 please let our development team know via email at info@hestiacp.com. 
 
 We ask that you please include a detailed description of the vulnerability,

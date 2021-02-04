@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Hestia Control Panel - Upgrade Control Script
+# Mackshost Control Panel - Upgrade Control Script
 
 #####################################################################
 #######                Functions & Initialization             #######
@@ -25,7 +25,7 @@ upgrade_health_check() {
         export VERSION="1.1.0"
         $BIN/v-change-sys-config-value 'VERSION' "$VERSION"
         echo
-        echo "[ ! ] Unable to detect installed version of Hestia Control Panel."
+        echo "[ ! ] Unable to detect installed version of Mackshost Control Panel."
         echo "      Setting default version to $VERSION and processing upgrade steps."
         echo
     fi
@@ -139,7 +139,7 @@ upgrade_welcome_message() {
     echo '                 |  _  |  __/\__ \ |_| | (_| | |___|  __/                     '
     echo '                 |_| |_|\___||___/\__|_|\__,_|\____|_|                        '
     echo "                                                                              "
-    echo "                    Hestia Control Panel Software Update                      "
+    echo "                    Mackshost Control Panel Software Update                      "
     echo "                               Version: ${DISPLAY_VER}                         "
     if [[ "$new_version" =~ "beta" ]]; then
         echo "                                BETA RELEASE                               "
@@ -163,7 +163,7 @@ upgrade_welcome_message() {
 
 upgrade_welcome_message_log() {
     echo "=============================================================================="
-    echo "Hestia Control Panel Software Update Log"
+    echo "Mackshost Control Panel Software Update Log"
     echo "=============================================================================="
     echo
     echo "OPERATING SYSTEM:      $OS_TYPE ($OS_VERSION)"
@@ -198,11 +198,11 @@ upgrade_complete_message() {
     echo "please take a moment to report it to us on GitHub at the URL below:          "
     echo "https://github.com/hestiacp/hestiacp/issues                                  "
     echo
-    echo "We hope that you enjoy using this version of Hestia Control Panel,           "
+    echo "We hope that you enjoy using this version of Mackshost Control Panel,           "
     echo "have a wonderful day!                                                        "
     echo
     echo "Sincerely,                                                                   "
-    echo "The Hestia Control Panel development team                                    "
+    echo "The Mackshost Control Panel development team                                    "
     echo
     echo "Web:      https://www.hestiacp.com/                                          "
     echo "Forum:    https://forum.hestiacp.com/                                        "
@@ -236,7 +236,7 @@ upgrade_cleanup_message() {
 }
 
 upgrade_get_version() {
-    # Retrieve new version number for Hestia Control Panel from .deb package
+    # Retrieve new version number for Mackshost Control Panel from .deb package
     new_version=$(dpkg -l | awk '$2=="hestia" { print $3 }')
 }
 
@@ -250,13 +250,13 @@ upgrade_send_notification_to_panel () {
     # Add notification to panel if variable is set to true or is not set
     if [[ "$new_version" =~ "alpha" ]]; then
         # Send notifications for development releases
-        $HESTIA/bin/v-add-user-notification admin 'Development snapshot installed' '<b>Version:</b> '$new_version'<br><b>Code Branch:</b> '$RELEASE_BRANCH'<br><br>Please tell us about any bugs or issues by opening an issue report on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a> and feel free to share your feedback on our <a href="https://forum.hestiacp.com" target="_new">discussion forum</a>.<br><br><i class="fas fa-heart status-icon red"></i> The Hestia Control Panel development team'
+        $HESTIA/bin/v-add-user-notification admin 'Development snapshot installed' '<b>Version:</b> '$new_version'<br><b>Code Branch:</b> '$RELEASE_BRANCH'<br><br>Please tell us about any bugs or issues by opening an issue report on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a> and feel free to share your feedback on our <a href="https://forum.hestiacp.com" target="_new">discussion forum</a>.<br><br><i class="fas fa-heart status-icon red"></i> The Mackshost Control Panel development team'
     elif [[ "$new_version" =~ "beta" ]]; then
         # Send feedback notification for beta releases
-        $HESTIA/bin/v-add-user-notification admin 'Thank you for testing Hestia Control Panel '$new_version'.' '<b>Please share your feedback with our development team through our <a href="https://forum.hestiacp.com" target="_new">discussion forum</a>.<br><br>Found a bug? Report it on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a>!</b><br><br><i class="fas fa-heart status-icon red"></i> The Hestia Control Panel development team'
+        $HESTIA/bin/v-add-user-notification admin 'Thank you for testing Mackshost Control Panel '$new_version'.' '<b>Please share your feedback with our development team through our <a href="https://forum.hestiacp.com" target="_new">discussion forum</a>.<br><br>Found a bug? Report it on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a>!</b><br><br><i class="fas fa-heart status-icon red"></i> The Mackshost Control Panel development team'
     else
         # Send normal upgrade complete notification for stable releases
-        $HESTIA/bin/v-add-user-notification admin 'Upgrade complete' 'Your server has been updated to Hestia Control Panel <b>v'$new_version'</b>.<br><br>Please tell us about any bugs or issues by opening an issue report on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a>.<br><br><b>Have a wonderful day!</b><br><br><i class="fas fa-heart status-icon red"></i> The Hestia Control Panel development team'
+        $HESTIA/bin/v-add-user-notification admin 'Upgrade complete' 'Your server has been updated to Mackshost Control Panel <b>v'$new_version'</b>.<br><br>Please tell us about any bugs or issues by opening an issue report on <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a>.<br><br><b>Have a wonderful day!</b><br><br><i class="fas fa-heart status-icon red"></i> The Mackshost Control Panel development team'
     fi
 }
 
@@ -271,7 +271,7 @@ upgrade_send_notification_to_email () {
         touch $message_tmp_file
 
         # Write message to file
-        echo "$HOSTNAME has been upgraded from Hestia Control Panel v$VERSION to v${new_version}." >> $message_tmp_file
+        echo "$HOSTNAME has been upgraded from Mackshost Control Panel v$VERSION to v${new_version}." >> $message_tmp_file
         echo "Installation log: $LOG" >> $message_tmp_file
         echo "" >> $message_tmp_file
         echo "What's new: https://github.com/hestiacp/hestiacp/blob/$RELEASE_BRANCH/CHANGELOG.md" >> $message_tmp_file
@@ -282,7 +282,7 @@ upgrade_send_notification_to_email () {
         echo "" >> $message_tmp_file
         echo "==================================================="  >> $message_tmp_file
         echo "Have a wonderful day," >> $message_tmp_file
-        echo "The Hestia Control Panel development team" >> $message_tmp_file
+        echo "The Mackshost Control Panel development team" >> $message_tmp_file
         
         # Read back message from file and pass through to sendmail
         cat $message_tmp_file | $send_mail -s "Update Installed - v${new_version}" $admin_email
@@ -300,7 +300,7 @@ upgrade_send_log_to_email() {
 
 upgrade_init_backup() {
     # Ensure that backup directories are created
-    # Hestia Control Panel configuration files
+    # Mackshost Control Panel configuration files
     mkdir -p $HESTIA_BACKUP/conf/hestia/
 
     # System services (apache2, nginx, bind9, vsftpd, etc).
@@ -403,7 +403,7 @@ upgrade_start_backup() {
         echo "      - Configuration files:"
     fi
 
-    # Hestia Control Panel configuration files
+    # Mackshost Control Panel configuration files
     if [ "$DEBUG_MODE" = "true" ]; then
         echo "      ---- hestia"
     fi
@@ -527,7 +527,7 @@ upgrade_start_routine() {
         upgrade_refresh_config
     else
         echo ""
-        echo "[ ! ] The latest version of Hestia Control Panel is already installed."
+        echo "[ ! ] The latest version of Mackshost Control Panel is already installed."
         echo "      Verifying configuration..."
         echo ""
         if [ -e "$HESTIA/install/upgrade/versions/$VERSION.sh" ]; then
@@ -754,7 +754,7 @@ upgrade_restart_services() {
         $BIN/v-restart-service ssh $restart
     fi
 
-    # Always restart the Hestia Control Panel service
+    # Always restart the Mackshost Control Panel service
     if [ "$DEBUG_MODE" = "true" ]; then
         echo "      - hestia"
     fi

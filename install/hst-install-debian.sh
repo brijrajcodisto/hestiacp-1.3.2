@@ -292,7 +292,7 @@ if [ ! -f /etc/apt/apt.conf.d/80-retries ]; then
 fi
 
 # Welcome message
-echo "Welcome to the Hestia Control Panel installer!"
+echo "Welcome to the Mackshost Control Panel installer!"
 echo 
 echo "hare krishna Please wait, the installer is now checking for missing dependencies..."
 echo 
@@ -344,7 +344,7 @@ if [ ! -z "$conflicts" ] && [ -z "$force" ]; then
         check_result $? 'apt-get remove failed'
         unset $answer
     else
-        check_result 1 "Hestia Control Panel should be installed on a clean server."
+        check_result 1 "Mackshost Control Panel should be installed on a clean server."
     fi
 fi
 
@@ -408,7 +408,7 @@ install_welcome_message() {
     echo '               |  _  |  __/\__ \ |_| | (_| | |___|  __/                 '
     echo '               |_| |_|\___||___/\__|_|\__,_|\____|_|                    '
     echo "                                                                        "
-    echo "                          Hestia Control Panel                          "
+    echo "                          Mackshost Control Panel                          "
     if [[ "$HESTIA_INSTALL_VER" =~ "beta" ]]; then
         echo "                              BETA RELEASE                          "
     fi
@@ -422,7 +422,7 @@ install_welcome_message() {
     echo
     echo "========================================================================"
     echo 
-    echo "Thank you for downloading Hestia Control Panel! In a few moments,"
+    echo "Thank you for downloading Mackshost Control Panel! In a few moments,"
     echo "we will begin installing the following components on your server:"          
     echo
 }
@@ -610,7 +610,7 @@ if [ "$mysql" = 'yes' ]; then
 fi
 
 # Installing HestiaCP repo
-echo "[ * ] Hestia Control Panel"
+echo "[ * ] Mackshost Control Panel"
 echo "deb https://$RHOST/ $codename main" > $apt/hestia.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A189E93654F0B0E5 > /dev/null 2>&1
 
@@ -943,7 +943,7 @@ fi
 #                     Configure Hestia                     #
 #----------------------------------------------------------#
 
-echo "[ * ] Configuring Hestia Control Panel..."
+echo "[ * ] Configuring Mackshost Control Panel..."
 # Installing sudo configuration
 mkdir -p /etc/sudoers.d
 cp -f $HESTIA_INSTALL_DIR/sudo/admin /etc/sudoers.d/
@@ -1122,7 +1122,7 @@ $HESTIA/bin/v-change-sys-hostname $servername > /dev/null 2>&1
 # Generating SSL certificate
 echo "[ * ] Generating default self-signed SSL certificate..."
 $HESTIA/bin/v-generate-ssl-cert $(hostname) $email 'US' 'California' \
-     'San Francisco' 'Hestia Control Panel' 'IT' > /tmp/hst.pem
+     'San Francisco' 'Mackshost Control Panel' 'IT' > /tmp/hst.pem
 
 # Parsing certificate file
 crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem |cut -f 1 -d:)
@@ -1130,7 +1130,7 @@ key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem |cut -f 1 -d:)
 key_end=$(grep -n  "END RSA" /tmp/hst.pem |cut -f 1 -d:)
 
 # Adding SSL certificate
-echo "[ * ] Adding SSL certificate to Hestia Control Panel..."
+echo "[ * ] Adding SSL certificate to Mackshost Control Panel..."
 cd $HESTIA/ssl
 sed -n "1,${crt_end}p" /tmp/hst.pem > certificate.crt
 sed -n "$key_start,${key_end}p" /tmp/hst.pem > certificate.key
@@ -1852,7 +1852,7 @@ echo -e "\n"
 # Sending notification to admin email
 echo -e "Congratulations!
 
-You have successfully installed Hestia Control Panel on your server. 
+You have successfully installed Mackshost Control Panel on your server. 
 
 Ready to get started? Log in using the following credentials:
 
@@ -1860,7 +1860,7 @@ Ready to get started? Log in using the following credentials:
     Username:   admin
     Password:   $vpass
 
-Thank you for choosing Hestia Control Panel to power your full stack web server,
+Thank you for choosing Mackshost Control Panel to power your full stack web server,
 we hope that you enjoy using it as much as we do!
 
 Please feel free to contact us at any time if you have any questions,
@@ -1879,13 +1879,13 @@ Help support the Hestia Contol Panel project by donating via PayPal:
 https://www.hestiacp.com/donate
 --
 Sincerely yours,
-The Hestia Control Panel development team
+The Mackshost Control Panel development team
 
 Made with love & pride by the open-source community around the world.
 " > $tmpfile
 
 send_mail="$HESTIA/web/inc/mail-wrapper.php"
-cat $tmpfile | $send_mail -s "Hestia Control Panel" $email
+cat $tmpfile | $send_mail -s "Mackshost Control Panel" $email
 
 # Congrats
 echo
@@ -1893,7 +1893,7 @@ cat $tmpfile
 rm -f $tmpfile
 
 # Add welcome message to notification panel
-$HESTIA/bin/v-add-user-notification admin 'Welcome to Hestia Control Panel!' '<br>You are now ready to begin <a href="/add/user/">adding user accounts</a> and <a href="/add/web/">domains</a>. For help and assistance, view the <a href="https://docs.hestiacp.com/" target="_new">documentation</a> or visit our <a href="https://forum.hestiacp.com/" target="_new">user forum</a>.<br><br>Please report any bugs or issues via <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a> or e-mail <a href="mailto:info@hestiacp.com?Subject="['$new_version'] Bug Report: ">info@hestiacp.com</a>.<br><br><b>Have a wonderful day!</b><br><br><i class="fas fa-heart status-icon red"></i> The Hestia Control Panel development team'
+$HESTIA/bin/v-add-user-notification admin 'Welcome to Mackshost Control Panel!' '<br>You are now ready to begin <a href="/add/user/">adding user accounts</a> and <a href="/add/web/">domains</a>. For help and assistance, view the <a href="https://docs.hestiacp.com/" target="_new">documentation</a> or visit our <a href="https://forum.hestiacp.com/" target="_new">user forum</a>.<br><br>Please report any bugs or issues via <a href="https://github.com/hestiacp/hestiacp/issues" target="_new"><i class="fab fa-github"></i> GitHub</a> or e-mail <a href="mailto:info@hestiacp.com?Subject="['$new_version'] Bug Report: ">info@hestiacp.com</a>.<br><br><b>Have a wonderful day!</b><br><br><i class="fas fa-heart status-icon red"></i> The Mackshost Control Panel development team'
 
 echo "[ ! ] IMPORTANT: You must logout or restart the server before continuing."
 echo ""

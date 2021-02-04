@@ -88,7 +88,7 @@ if (!empty($_POST['ok'])) {
     // Send email to the new user
     if ((empty($_SESSION['error_msg'])) && (!empty($v_notify))) {
         $to = $_POST['v_notify'];
-        $subject = _("Welcome to Hestia Control Panel"); //currently not supported to use the account language
+        $subject = _("Welcome to Mackshost Control Panel"); //currently not supported to use the account language
         $hostname = exec('hostname');
         unset($output);
         $from = sprintf(_('MAIL_FROM'),$hostname); //currently not supported to use the account language

@@ -180,7 +180,7 @@ msgstr ""
 
 #: ../../web/add/user/index.php:91 ../../web/templates/login.html:16
 #: ../../web/templates/login_a.html:16
-msgid "Welcome to Hestia Control Panel"
+msgid "Welcome to Mackshost Control Panel"
 msgstr ""
 
 #: ../../web/add/user/index.php:97 ../../web/reset/index.php:39
@@ -607,7 +607,7 @@ msgstr ""
 #: ../../web/templates/admin/list_weblog.html:6
 #: ../../web/templates/login_a.html:8 ../../web/templates/login_2.html:8
 #: ../../web/templates/reset2fa.html:8
-msgid "Hestia Control Panel"
+msgid "Mackshost Control Panel"
 msgstr ""
 
 #: ../../web/templates/login_1.html:18
@@ -3361,7 +3361,7 @@ msgid "Old Style"
 msgstr ""
 
 #: ../../web/templates/admin/edit_server.html:876
-msgid "Hestia Control Panel Plugins"
+msgid "Mackshost Control Panel Plugins"
 msgstr ""
 
 #: ../../web/templates/admin/edit_server.html:885

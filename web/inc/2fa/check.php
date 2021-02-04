@@ -17,7 +17,7 @@ Loader::register('./','RobThree\\Auth');
 
 use \RobThree\Auth\TwoFactorAuth;
 
-$tfa = new TwoFactorAuth('Hestia Control Panel');
+$tfa = new TwoFactorAuth('Mackshost Control Panel');
 
 // Verify code
 $result = $tfa->verifyCode($secret, $token);

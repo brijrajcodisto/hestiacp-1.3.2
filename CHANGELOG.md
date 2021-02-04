@@ -340,7 +340,7 @@ All notable changes to this project will be documented in this file.
 - v-sys-update-hestia-git: Added the ability to update using Git from the command line.
 - Implemented support for SFTP chroot jails.
 - A newly redesigned user interface which features:
-    - A softer color palette which better matches the Hestia Control Panel logo colors.
+    - A softer color palette which better matches the Mackshost Control Panel logo colors.
     - A consolidated overview of domains and other information.
     - Improved navigation paths to make things easier to find.
     - Improved compatibility when viewing the Control Panel interface from a mobile device.

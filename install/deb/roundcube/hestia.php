@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Hestia Control Panel Password Driver
+ * Mackshost Control Panel Password Driver
  *
  * @version 1.0
  * @author HestiaCP <info@hestiacp.com>

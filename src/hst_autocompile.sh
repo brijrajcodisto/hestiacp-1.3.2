@@ -168,7 +168,7 @@ if [[ $# -eq 0 ]] ; then
   echo "following the branch name."
   echo ""
   echo "Example: bash hst_autocompile.sh --hestia develop Y"
-  echo "This would install a Hestia Control Panel package compiled with the"
+  echo "This would install a Mackshost Control Panel package compiled with the"
   echo "develop branch code."
   exit 1
 fi
@@ -420,7 +420,7 @@ fi
 #################################################################################
 
 if [ "$HESTIA_B" = true ]; then
-    echo "Building Hestia Control Panel package..."
+    echo "Building Mackshost Control Panel package..."
     # Change to build directory
     cd $BUILD_DIR
 

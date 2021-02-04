@@ -18,7 +18,7 @@ Please enter your answer here (e.g. the web domain should have been added succes
 ### Operating system:
 Please enter your answer here (e.g. Ubuntu 20.04 LTS)
 
-### Hestia Control Panel version:
+### Mackshost Control Panel version:
 Please enter your answer here (e.g. 1.3.0). 
 
 ### Additional notes:

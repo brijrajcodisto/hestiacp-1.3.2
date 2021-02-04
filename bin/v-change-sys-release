@@ -4,7 +4,7 @@
 # labels: hestia
 #
 # The function for changing the release branch for the
-# Hestia Control Panel. This allows the user to switch between
+# Mackshost Control Panel. This allows the user to switch between
 # stable and pre-release builds which will automaticlly update
 # based on the appropriate release schedule if auto-update is
 # turned on.
