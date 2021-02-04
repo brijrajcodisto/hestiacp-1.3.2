@@ -102,4 +102,4 @@ Mackshost Control Panel is licensed under [GPL v3](https://github.com/hestiacp/h
 
 
 Steps to make deb file.
-sudo ./hst_autocompile.sh --hestia '~localsrc' no
+sudo ./hestiacp-1.3.2/hst_autocompile.sh --hestia '~localsrc' yes
