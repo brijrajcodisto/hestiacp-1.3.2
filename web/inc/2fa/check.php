@@ -17,7 +17,7 @@ Loader::register('./','RobThree\\Auth');
 
 use \RobThree\Auth\TwoFactorAuth;
 
-$tfa = new TwoFactorAuth('Mackshost Control Panel');
+$tfa = new TwoFactorAuth('Mackshost CPanel');
 
 // Verify code
 $result = $tfa->verifyCode($secret, $token);
