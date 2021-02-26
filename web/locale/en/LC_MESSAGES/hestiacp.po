@@ -133,7 +133,7 @@ msgstr ""
 "Password: %s\n"
 "\n"
 "--\n"
-"Hestia Control Panel"
+"Mackshost CPanel"
 
 #: ../../web/download/backup/index.php:24
 msgid "Error: Hestia did not return any output."
@@ -534,8 +534,8 @@ msgstr "Name Servers"
 
 #: ../../web/add/user/index.php:91 ../../web/templates/login.html:16
 #: ../../web/templates/login_a.html:16
-msgid "Welcome to Hestia Control Panel"
-msgstr "Welcome to Hestia Control Panel"
+msgid "Welcome to Mackshost CPanel"
+msgstr "Welcome to Mackshost CPanel"
 
 #: ../../web/templates/login_1.html:26
 msgid "forgot password"
@@ -1507,8 +1507,8 @@ msgstr "Web Log Manager"
 #: ../../web/templates/admin/list_weblog.html:6
 #: ../../web/templates/login_a.html:8 ../../web/templates/login_2.html:8
 #: ../../web/templates/reset2fa.html:8
-msgid "Hestia Control Panel"
-msgstr "Hestia Control Panel"
+msgid "Mackshost CPanel"
+msgstr "Mackshost CPanel"
 
 #: ../../web/templates/admin/list_web.html:144
 #: ../../web/templates/user/list_web.html:149
@@ -1873,7 +1873,7 @@ msgid "ISSUER"
 msgstr "ISSUER"
 
 #: ../../web/templates/admin/edit_server.html:876
-msgid "Hestia Control Panel Plugins"
+msgid "Mackshost CPanel Plugins"
 msgstr "Plugins"
 
 #: ../../web/templates/admin/edit_server.html:899
@@ -3019,7 +3019,7 @@ msgstr "Password Reset at %s"
 #: ../../web/edit/mail/index.php:523 ../../web/edit/web/index.php:663
 #: ../../web/edit/web/index.php:737 ../../web/reset/index.php:37
 msgid "MAIL_FROM"
-msgstr "Hestia Control Panel <noreply@%s>"
+msgstr "Mackshost CPanel <noreply@%s>"
 
 #: ../../web/add/user/index.php:97 ../../web/reset/index.php:39
 msgid "GREETINGS_GORDON"
@@ -3032,7 +3032,7 @@ msgstr "Hello,"
 #: ../../web/reset/index.php:44
 msgid "PASSWORD_RESET_REQUEST"
 msgstr ""
-"To reset your Hestia Control Panel password, please follow this link:\n"
+"To reset your Mackshost CPanel password, please follow this link:\n"
 "https://%s/reset/?action=confirm&user=%s&code=%s\n"
 "\n"
 "Alternatively, you may go to https://%s/reset/?action=code&user=%s and enter the following reset code:\n"
@@ -3041,7 +3041,7 @@ msgstr ""
 "If you did not request password reset, please ignore this message and accept our apologies.\n"
 "\n"
 "--\n"
-"Hestia Control Panel"
+"Mackshost CPanel"
 
 #: ../../web/reset/index.php:49
 msgid "Invalid host domain"
@@ -3167,7 +3167,7 @@ msgstr ""
 "Password: %s\n"
 "\n"
 "--\n"
-"Hestia Control Panel"
+"Mackshost CPanel"
 
 #: ../../web/edit/web/index.php:704
 msgid "ftp user"
@@ -3433,7 +3433,7 @@ msgstr ""
 "%s\n"
 "\n"
 "--\n"
-"Hestia Control Panel"
+"Mackshost CPanel"
 
 #: ../../web/add/db/index.php:99
 msgid "DATABASE_CREATED_OK"
